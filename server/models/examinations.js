@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const examinationsSchema = new Schema({
-    id: {type: Schema.Types.ObjectId},
+    _id: {type: Schema.Types.ObjectId},
     student: {type: Schema.Types.ObjectId},
     examinationItems: {type: Schema.Types.ObjectId},
     scores: {type: [new Schema({

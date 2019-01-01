@@ -26,7 +26,7 @@ const UserType = new GraphQLObjectType({
         student: {
             type: StudentsType,
             resolve(parent, args){
-                return Students.findOne({user: parent.id});
+                return Students.findOne({user: parent._id});
             }
         },
         acceptedTos: {type: GraphQLString},
@@ -40,7 +40,7 @@ const UserType = new GraphQLObjectType({
 
 const StudentsType = new GraphQLObjectType({
     name: 'Students',
-    fields: (parent, args, req) => ({
+    fields: () => ({
         user: {
             type: UserType,
             resolve(parent, args){
@@ -50,7 +50,7 @@ const StudentsType = new GraphQLObjectType({
         detail: {type: detailType},
         school: {type: GraphQLID}, 
         year: {type: GraphQLString},
-        schoolGroups: {type: GraphQLList},
+        schoolGroups: {type: new GraphQLList()},
         advisers: {type: GraphQLList},
         predictedScores: {type: predicetdScoreType},
         transcripts: {type: new GraphQLList(transcriptsType)}, 
@@ -167,7 +167,7 @@ const Mutation = new GraphQLObjectType({
                 weaknesses: {type: GraphQLString},
                 acquiantanceTime: {type: GraphQLString},
                 abilityRates: {type: new GraphQLList(abilityRatesType)},
-                recommendations: {type: GraphQLList}, // add recommendationType.js
+                recommendations: {type: GraphQLList},
                 application: {type: new GraphQLList(applicationsType)},
                 applicationResults: {type: new GraphQLList(applicationsResultsType)},
                 applicationStatus: {type: GraphQLID},

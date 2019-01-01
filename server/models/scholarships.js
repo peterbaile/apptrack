@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const scholarshipsSchema = new Schema({
-    id: {type: Schema.Types.ObjectId},
+    _id: {type: Schema.Types.ObjectId},
     scholarshipItem: {type: Schema.Types.ObjectId},
     isOther: {type: Boolean},
     otherScholarshipTitle: {type: String},

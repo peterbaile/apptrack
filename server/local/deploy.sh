@@ -6,7 +6,7 @@
 # must be in the format of PORT=3000
 PORT=8000
 
-echo "--------Creating Server-------"
+echo "--------Creating Server on port $PORT -------"
 
 cd ..
 docker stop apptrack-backend

@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const transcriptsSchema = new Schema({
-    id: {type: Schema.Types.ObjectId},
+    _id: {type: Schema.Types.ObjectId},
     student: {type: String},
     filename: {type: String},
     path: {type: String},
