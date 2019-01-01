@@ -1,7 +1,7 @@
 # apptrack-backend
 
 Pre-requisite:
-Install docker in your computer
+Install docker in your computer [from this link](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 
 Directory:
 download the zip file and make directory to "local" folder
