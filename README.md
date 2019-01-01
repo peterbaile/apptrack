@@ -1,4 +1,4 @@
-# apptrack
+# apptrack-backend
 
 Pre-requisite:
 Install docker in your computer
