@@ -10,7 +10,7 @@ const recommendationSchema = new Schema({
     type: {type: String},
     filename: {type: String},
     path: {type: String},
-    text: {type: Text},
+    text: {type: String},
     status: {type: String},
     uploadedBy: {type: Schema.Types.ObjectId},
     uploadedDT: {type: Date}

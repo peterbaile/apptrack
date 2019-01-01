@@ -8,7 +8,7 @@ const RecommendationType = new GraphQLObjectType({
         adviserName: {type: GraphQLString},
         application: {type: GraphQLList},
         type: {type: GraphQLString},
-        filename: {type: GraghQLString},
+        filename: {type: GraphQLString},
         path: {type: GraphQLString},
         text: {type: GraphQLString},
         status: {type: GraphQLString},
