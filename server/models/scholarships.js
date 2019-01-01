@@ -1,16 +1,18 @@
+// ok
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const scholarshipsSchema = new Schema({
-    id: Schema.Types.ObjectId,
-    scholarshipItem: Schema.Types.ObjectId,
-    isOther: Boolean,
-    otherScholarshipTitle: String,
-    status: String,
-    createdDT: Date,
-    createdBy: String,
-    modifiedDT: Date,
-    modifiedBy: String
+    id: {type: Schema.Types.ObjectId},
+    scholarshipItem: {type: Schema.Types.ObjectId},
+    isOther: {type: Boolean},
+    otherScholarshipTitle: {type: String},
+    status: {type: String},
+    createdDT: {type: Date},
+    createdBy: {type: String},
+    modifiedDT: {type: Date},
+    modifiedBy: {type: String}
 });
 
 module.exports = scholarshipsSchema;

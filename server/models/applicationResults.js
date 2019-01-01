@@ -1,21 +1,21 @@
-// 
+// ok
 
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const applicationResultsSchema = new Schema({
-    id: Schema.Types.ObjectId,
-    application: Schema.Types.ObjectId,
-    university: String,
-    applicationNo: String,
-    offerStatus: String,
-    offerCondition: String,
-    programmeOffered: String,
-    matriculation: Boolean,
-    status: String,
-    createdDT: Date,
-    modifiedBy: Date,
-    modifiedDT: String
+    id: {type: Schema.Types.ObjectId},
+    application: {type: Schema.Types.ObjectId},
+    university: {type: String},
+    applicationNo: {type: String},
+    offerStatus: {type: String},
+    offerCondition: {type: String},
+    programmeOffered: {type: String},
+    matriculation: {type: Boolean},
+    status: {type: String},
+    createdDT: {type: Date},
+    modifiedBy: {type: Date},
+    modifiedDT: {type: String}
 })
 
 module.exports = applicationResultsSchema;
