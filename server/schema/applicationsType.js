@@ -12,13 +12,13 @@ const ApplicationsType = new GraphQLObjectType({
         university: {type: GraphQLID},
         universityName: {type: GraphQLString},
         admissionContact: {type: GraphQLString},
-        programs: new GraphQLList(new GraphQLObjectType({
+        programs: {type: new GraphQLList(new GraphQLObjectType({
             name: 'Program',
             fields: () => ({
                 seq: {type: GraphQLInt},
                 program: {type: GraphQLID}
             })
-        })),
+        }))},
         round: {type: GraphQLID},
         completedStatus: {type: GraphQLString},
         submittedReminderDT: {type: GraphQLString},
