@@ -82,11 +82,9 @@ const UserReturnType = {
         resolve: async (parent, args) => {
             const student = await Students.findOne({user: parent._id});
             console.log(student);
-            return student
-            
+            return student;
         }
-    },
-    
+    }
 }
 
 // define output types
@@ -122,7 +120,10 @@ const RootQuery = new GraphQLObjectType({
 
         user:{
             type: UserType,
-            args: {username: {type: GraphQLString}, password: {type: GraphQLString}},
+            args: {
+                username: {type: GraphQLString}, 
+                password: {type: GraphQLString}
+            },
             resolve(parent, args){
                 // return a single user
                 return User.findOne({username: args.username, password: args.password});
@@ -131,10 +132,16 @@ const RootQuery = new GraphQLObjectType({
 
         student: {
             type: StudentsType,
-            args: {username: {type: GraphQLString}, password: {type: GraphQLString}},
+            args: {
+                username: { type: GraphQLString },
+                password: { type: GraphQLString }
+            },
             resolve(parent, args){
                 // return a single student
-                return Students.findOne({username: args.username, password: args.password});
+                return Students.findOne({
+                    username: args.username,
+                    password: args.password
+                });
             }
         }
     }
